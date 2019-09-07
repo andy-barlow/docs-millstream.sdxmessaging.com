@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdx:sjr xmlns:sdx="http://sdxmessaging.com/sdx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sdxmessaging.com/sdx https://cloud.sdxmessaging.com/vault/sdx/xsd/sdx60-sjr.xsd" filename="${SDX.SJRFile}">
+   <jobs>
+      <job client="${client}" key="${key}" handle-error="ERRORSJR" id="customercopy">
+         <vault safe-deposit-box="${safedepositbox}/millstream">
+            <assets static="true">
+               <asset disposition="inline" mimetype="text/html" filename="loggedout.html" logout="true">
+                  <value><![CDATA[${loggedout_html}]]></value>
+               </asset>
+            </assets>
+            <!-- these controls apply to ALL assets -->
+            <controls/>
+            <licensing>
+               <licensees>
+                  <licensee id="${licensee}"/>
+               </licensees>
+               <asset disposition="inline" mimetype="text/html" filename="accountlogin.html">
+                  <value><![CDATA[${htmlaccountlogin}]]></value>
+               </asset>
+               <events>
+                  <onCollect>
+                     <sjr filename="${SDX.SJRFile}">
+                        <jobs>
+                           <job client="${client}" key="${key}" handle-error="ERRORSJR" condition="'${ASSET.Name}'=='index.html'">
+                              <email>
+                                 <from><![CDATA[${from}]]></from>
+                                 <to><![CDATA[andy.barlow@sdxmessaging.com]]></to>
+                                 <subject><![CDATA[ASSET collected]]></subject>
+                                 <html><![CDATA[
+<html>
+   <body>
+      <table>
+         <tr><td>Timestamp:</td><td>${SDX.Timestamp}</td><tr>
+         <tr><td>Name:</td><td>${ASSET.Name}</td><tr>
+         <tr><td>Handle:</td><td>${ASSET.Handle}</td><tr>
+         <tr><td>Person:</td><td>${SDX.PhraseID}</td><tr>
+   </body>
+</html>]]></html>
+                              </email>
+                           </job>
+                        </jobs>
+                     </sjr>
+                  </onCollect>
+                  <onRejected>
+                     <asset disposition="inline" mimetype="text/html" filename="accountlogin.html">
+                        <value><![CDATA[${htmlaccountlogin}]]></value>
+                     </asset>
+                     <sjr filename="${SDX.SJRFile}">
+                        <jobs/>
+                     </sjr>
+                  </onRejected>
+                  <onSessionTimeout>
+                     <asset disposition="inline" mimetype="text/html" filename="accountlogin.html">
+                        <value><![CDATA[${htmlaccountlogin}]]></value>
+                     </asset>
+                     <sjr filename="${SDX.SJRFile}">
+                        <jobs/>
+                     </sjr>
+                  </onSessionTimeout>
+                  <onSoftlock>
+                     <asset disposition="inline" mimetype="text/html" filename="accountlogin.html">
+                        <value><![CDATA[${htmlaccountlogin}]]></value>
+                     </asset>
+                     <sjr filename="${SDX.SJRFile}">
+                        <jobs/>
+                     </sjr>
+                  </onSoftlock>
+                  <onEmbargoed>
+                     <asset disposition="inline" mimetype="text/html" filename="accountlogin.html">
+                        <value><![CDATA[${htmlaccountlogin}]]></value>
+                     </asset>
+                     <sjr filename="${SDX.SJRFile}">
+                        <jobs/>
+                     </sjr>
+                  </onEmbargoed>
+                  <onExpired>
+                     <asset disposition="inline" mimetype="text/html" filename="accountlogin.html">
+                        <value><![CDATA[${htmlaccountlogin}]]></value>
+                     </asset>
+                     <sjr filename="${SDX.SJRFile}">
+                        <jobs/>
+                     </sjr>
+                  </onExpired>
+               </events>
+            </licensing>
+         </vault>
+         <onSuccess>
+            <sjr filename="${SDX.SJRFile}">
+               <jobs>
+                  <!-- ::::::::::: MAIN LICENSEE & TWO-FACTOR (SMS) ::::::::::: -->
+                  <job client="${client}" key="${key}" handle-error="ERRORSJR">
+                     <licensees>
+                        <!-- ::::::::::: MAIN LICENSEE ::::::::::: -->
+                        <licensee id="${licensee}" embargo="${embargo}" expires-at="${expiry}" active="true" hard-failures="0" soft-failures="0" rejected="false" timeout="${timeout}" softlock="${softlock}" soft-lock-out="${softlockout}" hardlock="${hardlock}" hard-lock-out="${hardlockout}">
+                           <username>${username}</username>
+                           <password>
+                              <fixed>
+                                 <phrase token="PIN-ANB" id="${id-anb}">${pinanb}</phrase>
+                                 <phrase token="PIN-MILLSTREAM" id="${id-millstream}">${pinmillstream}</phrase>
+                              </fixed>
+                              <controls/>
+                           </password>
+                        </licensee>
+                     </licensees>
+                     <onSuccess>
+                        <sjr filename="${SDX.SJRFile}">
+                           <jobs>
+                              <!-- ::::::::::: NOTIFICATION E-MAIL ::::::::::: -->
+                              <job client="${client}" key="${key}" handle-error="ERRORSJR" condition="${sendemail} == true">
+                                 <email>
+                                    <from><![CDATA[${from}]]></from>
+                                    <to><![CDATA[${email}]]></to>
+                                    <subject><![CDATA[${notification-email-subject}]]></subject>
+                                    <html><![CDATA[${notification-email-html}]]></html>
+                                 </email>
+                              </job>
+                           </jobs>
+                        </sjr>
+                     </onSuccess>
+                  </job>
+               </jobs>
+            </sjr>
+         </onSuccess>
+      </job>
+    </jobs>
+</sdx:sjr>

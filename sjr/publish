@@ -1,0 +1,7 @@
+rm assets.zip
+cd ../website
+mkdocs build --clean
+cd site
+zip -r ../../sjr/assets.zip *
+cd ../../sjr
+./cloud

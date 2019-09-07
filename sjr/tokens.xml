@@ -1,0 +1,1738 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<sdx:tokens xmlns:sdx="http://sdxmessaging.com/sdx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://sdxmessaging.com/sdx https://cloud.sdxmessaging.com/vault/sdx/xsd/sdx60-tokens.xsd">
+	<token>
+		<name>portal</name>
+		<value><![CDATA[Millstream SDX Portal]]></value>
+	</token>
+	<token>
+		<name>brand</name>
+		<value><![CDATA[millstream]]></value>
+	</token>
+	<token>
+		<name>pinanb</name>
+		<value>302268</value>
+	</token>
+	<token>
+		<name>id-anb</name>
+		<value>Andy Barlow</value>
+	</token>
+	<token>
+		<name>pinmillstream</name>
+		<value>2272</value>
+	</token>
+	<token>
+		<name>id-millstream</name>
+		<value>Millstream</value>
+	</token>
+	<token>
+		<name>customer</name>
+		<value><![CDATA[millstream]]></value>
+	</token>
+	<token>
+		<name>mobile</name>
+		<value><![CDATA[07830302268]]></value>
+	</token>
+	<token>
+		<name>email</name>
+		<value><![CDATA[andy.barlow@deftex.co.uk]]></value>
+	</token>
+	<token>
+		<name>username</name>
+		<value>millstream</value>
+	</token>
+	<token>
+		<name>fontawesomesvg</name>
+		<value><![CDATA[<script defer src="https://cloud.sdxmessaging.com/resources/fa-svg/js/fa-solid.js"></script><script defer src="https://cloud.sdxmessaging.com/resources/fa-svg/js/fa-regular.js"></script><script defer src="https://cloud.sdxmessaging.com/resources/fa-svg/js/fontawesome.js"></script>]]></value>
+	</token>
+	<token groovy="true">
+		<name>currentdate</name>
+		<value><![CDATA[new Date().format('dd MMMM YYYY')]]></value>
+	</token>
+	<token>
+		<name>frowcss</name>
+		<value><![CDATA[<link rel="stylesheet" href="https://cdn.rawgit.com/Beg-in/frow/3.0.0/dist/frow.min.css">]]></value>
+	</token>
+	<token>
+		<name>htmltop</name>
+		<value><![CDATA[
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	${fontawesomesvg}
+	<link rel="icon" href="https://www.fbd.ie/favicon.ico?v=2">
+	${frowcss}
+	<style>
+		a {
+			color: #337ab7;
+		}
+
+		header {
+			padding: 20px;
+		}
+
+		main {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		@font-face {
+			font-family: 'tisa';
+			src: url("https://cloud.sdxmessaging.com/resources/fbd/fonts/TisaSansOT.woff") format("woff");
+		}
+
+		@font-face {
+			font-family: 'tisa-medium';
+			src: url("https://cloud.sdxmessaging.com/resources/fbd/fonts/TisaSansOT-Medium.woff") format("woff");
+		}
+
+		.tisa {
+			font-family: tisa, sans-serif;
+		}
+
+		.tisa-medium {
+			font-family: tisa-medium, sans-serif;
+		}
+
+		.floating-menu {
+			background: black;
+			width: 100%;
+			z-index: 100;
+			position: fixed;
+			height: 56px;
+			padding-left: 12px;
+			bottom: 0px;
+		}
+
+		.icon {
+			padding: 5px;
+			width: 64px;
+		}
+
+		.notification {
+			position: fixed;
+			z-index: 999;
+			top: 0;
+			left: 0;
+			width: 100%;
+			padding: 12px 15px;
+			font-size: 16px;
+			font-weight: bold;
+			text-align: center;
+			-webkit-transition: -webkit-transform 0.3s;
+			transition: transform 0.3s;
+			transform: translate(0, -100%)
+		}
+
+		.notification--warning {
+			background: #f0ad4e !important;
+		}
+
+		.notification--danger {
+			background: #d9534f !important;
+		}
+
+		.notification--active {
+			transform: none;
+		}
+
+		@keyframes newFileBg {
+			0%,
+			80% {
+				background: #21B0EC
+			}
+			100% {
+				background: #fff
+			}
+		}
+
+		@keyframes newFileText {
+			0%,
+			80% {
+				color: #fff
+			}
+			100% {
+				color: inherit
+			}
+		}
+
+		.files {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.file {
+			margin: 0;
+			padding: 12px 38px 12px 15px;
+			border-bottom: 1px solid #d3d3d3;
+			position: relative;
+		}
+
+		.file a {
+			color: #000;
+			text-decoration: none;
+		}
+
+		.file__size {
+			color: #999999;
+		}
+
+		.file .fa {
+			margin-right: 10px;
+		}
+
+		.file--new {
+			animation: newFileBg 1.5s;
+		}
+
+		.file--new * {
+			animation: newFileText 1.5s;
+		}
+
+		.file--unviewed {
+			font-weight: bold;
+		}
+
+		.file--unviewed:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			margin-top: -4px;
+			right: 15px;
+			width: 8px;
+			height: 8px;
+			background: currentColor;
+			border-radius: 50%;
+		}
+
+		.file--expired a {
+			text-decoration: line-through; 
+		}
+
+		.file--expired *,
+		.file--embargoed * {
+			opacity: 0.5;
+		}
+
+		.files--uploads .file:after {
+			display: inline-block;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: 16px;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			position: absolute;
+			top: 50%;
+			margin-top: -8px;
+			right: 15px;
+			content: '\f1e0';
+			color: #d3d3d3;
+		}
+
+		.files--queue {
+			border-top: 1px solid #d3d3d3;
+		}
+
+
+		.file * {
+			z-index: 1;
+			position: relative;
+		}
+
+		.file__progress {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 0;
+			background: #f1f1f1;
+			right: 0;
+			bottom: 0;
+			width: 0;
+		}
+
+		.file__right {
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			transform: translate(0, -50%);
+		}
+
+		.file__edit {
+			-webkit-appearance: none;
+			appearance: none;
+			background: none;
+			border: 0;
+			border-radius: 0;
+			padding: 0;
+			font-size: 16px;
+			line-height: 1;
+			cursor: pointer;
+		}
+
+		.file__edit .fa {
+			margin: 0;
+		}
+
+		.file-actions {
+			position: absolute;
+			top: 0;
+			right: 0;
+			font-size: 16px;
+		}
+
+		.file-action {
+			-webkit-appearance: none;
+			appearance: none;
+			background: none;
+			border: 0;
+			border-radius: 0;
+			padding: 0;
+			margin: 0;
+		}
+
+		.file-action .fa {
+			font-size: 18px;
+			margin: 0;
+		}
+	</style>
+
+	<!-- File upload component styling -->
+	<style>
+		/* .color-text {
+			color: #21B0EC!important
+		} */
+
+		.drop-zone {
+			border: 2px dashed #bbb;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+			height: 100px;
+		}
+
+		.drop-zone label {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+		}
+
+		.drop-zone-hover {
+			border-color: #21B0EC;
+			background-color: #f5fffa;
+		}
+
+		.list-header {
+			margin: 10px;
+		}
+
+		/* File rename and status */
+
+		.file-li {
+			position: relative;
+		}
+
+		.file-li input {
+			padding-left: 36px;
+		}
+
+		/* Prevent "X" at far right in IE/Edge */
+
+		.file-li input::-ms-clear {
+			display: none;
+		}
+
+		.file-li progress {
+			width: 100%;
+		}
+
+		.file-input-icon,
+		.file-input-post {
+			position: absolute;
+			top: 0;
+			font-size: 16px;
+		}
+		.file-input-icon {
+			margin: 7px;
+			left: 0;
+		}
+		.file-input-post {
+			padding: 9px;
+			right: 0;
+		}
+	</style>
+</head>
+
+<body class="tisa">
+	<div id="toast"></div>
+	<header>
+		<div class="frow" id="header"></div>
+	</header>
+	<main id="library" class="frow justify-around"></main>
+	<nav class="floating-menu">
+		<div class="frow justify-between">
+			<div class="frow justify-start" id="menu"></div>
+			<div class="frow justify-end">
+				<div class="icon">
+					<a href="/vault/${loggedout.html}"><i class="fa fa-sign-out" style="color: #666666; font-size: 48px" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	${javascriptcdn}]]></value>
+	</token>
+	<token>
+		<name>hammercdn</name>
+		<value>https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js</value>
+	</token>
+	<token>
+		<name>mithrilcdn</name>
+		<value>https://cdnjs.cloudflare.com/ajax/libs/mithril/1.1.6/mithril.min.js</value>
+	</token>
+	<token>
+		<name>lodashcdn</name>
+		<value>https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js</value>
+	</token>
+	<token>
+		<name>pushercdn</name>
+		<value>https://cdnjs.cloudflare.com/ajax/libs/pusher/4.2.1/pusher.min.js</value>
+	</token>
+	<token>
+		<name>momentcdn</name>
+		<value>https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.3/moment.min.js</value>
+	</token>
+	<token>
+    	<name>javascriptcdn</name>
+    	<value><![CDATA[<script src="${hammercdn}"></script>
+	<script src="${mithrilcdn}"></script>
+	<script src="${lodashcdn}"></script>
+	<script src="${pushercdn}"></script>
+	<script src="${momentcdn}"></script>]]></value>
+    </token>	
+	<token>
+		<name>htmlbottom</name>
+		<value><![CDATA[</body></html>]]></value>
+	</token>
+	<token>
+		<name>vault_html</name>
+		<value><![CDATA[
+${htmltop}
+	<script>${vault.js}</script>
+${htmlbottom}
+]]></value>
+	</token>
+	<token>
+		<name>vault.js</name>
+		<value><![CDATA[
+			
+${documents.js}
+
+// IIFE
+
+(function () {
+	'use strict';
+	function filesizeinkb(size) {
+		return `(${_.round(size / 1000)}k)`;
+	}
+
+	function categoryIcon(category) {
+		switch (category) {
+			case "INBOX":
+				return "fa-inbox-in";
+			default: return "fa-book";
+		}
+	}
+
+	function fileIcon(fileType) {
+		switch (fileType) {
+			case "application/zip":
+				return "fa-file-archive";
+			case "application/pdf":
+				return "fa-file-pdf";
+			case "text/html":
+				return "fa-file-code";
+			case "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+			case "application/msword":
+				return "fa-file-word";
+			case "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
+			case "application/vnd.ms-excel":
+				return "fa-file-excel";
+			case "application/vnd.openxmlformats-officedocument.presentationml.presentation":
+			case "application/vnd.ms-powerpoint":
+				return "fa-file-powerpoint";
+			case "image/jpeg":
+			case "image/jpg":
+			case "image/png":
+			case "image/gif":
+			case "image/tiff":
+				return "fa-file-image";
+			case "audio/mpeg":
+				return "fa-file-audio";
+			case "video/mpeg":
+			case "video/quicktime":
+			case "video/x-msvideo":
+				return "fa-file-movie";
+			default:
+				return "fa-file-alt";
+		}
+	}
+
+	document.addEventListener("DOMContentLoaded", () => {
+
+		const processMessage = (data) => toastComponent.flashMessage(data.message, data.duration, data.color);
+
+		const processHeader = (data) => {
+			Data.header = _.merge(Data.header, data, {
+				deep: true,
+			});
+			m.redraw();
+		};
+
+		const addDocument = (document) => {
+			document.new = true;
+			documents.push(document);
+			m.redraw();
+		}
+		const addDocuments = (documents) => {
+			const docList = _.isArray(documents) ? documents : [documents];
+			docList.forEach(addDocument);
+			toastComponent.flashMessage(docList.length > 1 ? `We've sent you ${docList.length} documents` : `We've sent you ${docList[0].name}`);
+		}
+
+		const viewDocument = (data) => {
+			const viewedDocument = _.find(documents, { "href": data.href });
+			if (viewedDocument) {
+				viewedDocument.viewed = true;
+				m.redraw();
+			}
+
+		}
+		const pusher = new Pusher('26d1b6fc0112511f64ed', {
+			encrypted: true,
+			cluster: "eu"
+		});
+
+		const channel = pusher.subscribe('fbd');
+
+		channel.bind('message', processMessage);
+		channel.bind('company', processHeader);
+		channel.bind('${licensee}', addDocuments);
+		channel.bind('${licensee}/viewed', viewDocument);
+
+		const Data = {
+			getHeader: () => m.request("https://cloud.sdxmessaging.com/vault/sdx/resources/header.json"),
+
+			// default values
+			header: {"version": "1.0",
+"logo": {
+	"class": "col-xs-1-4",
+	"src": "https://cloud.sdxmessaging.com/vault/sdx/resources/logo.svg",
+	"height": "75px"
+},
+"contact": {
+	"class": "col-xs-3-4",
+	"style" : {"text_align": "right"},
+	"prefix": "SDX Messaging ",
+	"href": "tel:+3532222591",
+	"title": "Phone number SDX Messaging",
+	"phone": "0845 017 7910",
+	"week": "Monday - Friday, 9.00am - 5.00pm",
+	"week_style": {"color": "#0061B5"},
+	"weekend": "",
+	"weekend_style": {"color": "#0061B5"}
+},
+"copyright": "Â© 2017 SDX Messaging"
+},
+			profile: {
+				"current": "INBOX"
+			},
+			error: "",
+
+			fetch: () => Data.getHeader()
+				.then((data) => {
+					Data.header = data;
+				})
+				.catch((e) => {
+					Data.error = e;
+				})
+		};
+
+		const header = document.getElementById("header");
+
+		const headerComponent = {
+			oninit: Data.fetch,
+			view: () => [
+				m("div", { class: Data.header.logo.class },
+					m("img", { height: Data.header.logo.height, src: Data.header.logo.src })
+				),
+				m("div", { class: Data.header.contact.class, style: { "text-align": Data.header.contact.style.text_align } },
+					[
+						m("div",
+							[`${Data.header.contact.prefix}`,
+							m("a", { href: Data.header.contact.href, title: Data.header.contact.title },
+								Data.header.contact.phone
+							)
+							]
+						),
+						m("div", { style: { "color": Data.header.contact.week_style.color } },
+							Data.header.contact.week
+						),
+						m("div", { style: { "color": Data.header.contact.weekend_style.color } },
+							Data.header.contact.weekend
+						),
+						m("div", "Customer ", m("b", "${customer}"))
+					]
+				)
+			],
+		};
+
+
+		m.mount(header, headerComponent);
+
+		const DocumentComponent = {
+			view: (vnode) => {
+				// -1 embargoed 0 OK 1 expired
+				let x;
+				let availability = "";
+				if (moment().isBetween(vnode.attrs.doc.embargo_date, vnode.attrs.doc.expiry_date)) {
+					x = 0;
+				}
+				else if (moment().isAfter(vnode.attrs.doc.expiry_date)) {
+					x = 1;
+					availability = "file--expired";
+				}
+				else {
+					x = -1;
+					availability = "file--embargoed";
+				}
+				return m("div.frow justify-start", m("li.frow justify-start", { style: "width:100%; border-bottom: #d3d3d3; border-bottom-width: 1px; border-bottom-style: solid;", id: `doc-${vnode.attrs.doc.id}`, class: `file ${availability} ${vnode.attrs.doc.viewed ? "file--viewed" : "file--unviewed"} ${vnode.attrs.doc.new ? "file--new" : ""}` },
+					[m("span", { class: `fas color-text ${x === 0 ? fileIcon(vnode.attrs.doc.filetype) : x === 1 ? "fa-hourglass-end" : "fa-lock"}` }),
+					m("a", { href: `/vault/${vnode.attrs.doc.href}`, title: vnode.attrs.doc.name },
+						m("span", { style: "margin-left: 5px;" }, [`${vnode.attrs.doc.name}`, " ", vnode.attrs.doc.actions > 0 ? m("span", { style: "color:red" }, "❶") : "", m("span.file__size", filesizeinkb(vnode.attrs.doc.size))])
+					)
+					], vnode.attrs.doc.actions > 0 ? m("a", { href: "/vault/${sign.html}" }, m("button", "SIGN")) : null
+					// ], vnode.attrs.doc.actions > 0 ? m("a", { href: "/vault/${sign.html}"}, m("span"," SIGN")): null
+				))
+			}
+		}
+
+
+		const getuploadid = () => _.uniqueId("upload-")
+
+		function fileMetadata(file, category, idx) {
+			let name = file.name;
+			let ext = "";
+			const dotIdx = file.name.lastIndexOf(".");
+			if (dotIdx !== -1) {
+				name = file.name.slice(0, dotIdx);
+				ext = file.name.slice(dotIdx);
+			}
+			return {
+				id: `${file.name}-${idx}`,
+				category: category,
+				name: name,
+				extension: ext,
+				progress: 0,
+				uploaded: false,
+				queuedfile: file,
+				type: "passport"
+			}
+		}
+
+		const uploadComponent = {
+			oninit: function () {
+				this.uploading = false;
+				this.removeFile = (id) => {
+					_.remove(this.uploads, { id: id });
+				}
+			},
+			uploads: [],
+			dragging: false,
+			view: (vnode) => {
+				const uploadid = getuploadid();
+				return m("form.mt-15", {
+					onsubmit: (e) => {
+						vnode.state.uploading = true;
+						e.preventDefault();
+						_.forEach(_.filter(vnode.state.uploads, (upload) => upload.category === vnode.attrs.category && !upload.uploaded), (uploadfile) => {
+							uploadfile.progress = 0;
+							const frmData = new FormData();
+							frmData.append("original", uploadfile.queuedfile);
+							frmData.append("filename", uploadfile.name);
+							frmData.append("filetype", uploadfile.queuedfile.type);
+							frmData.append("filesize", uploadfile.queuedfile.size);
+							frmData.append("origin", "customer");
+							frmData.append("category", vnode.attrs.category);
+							frmData.append("subcategory", vnode.attrs.subcategory);
+							frmData.append("transaction_type", "CUSTOMER");
+							frmData.append("reference", "");
+							m.request({
+								method: "POST",
+								url: "https://${server}.sdxmessaging.com/vault/${safedepositbox}/client/${customer}/upload",
+								// url: "http://localhost:8080/upload",
+								data: frmData,
+								config: (xhr) => {
+									// file upload completed
+									xhr.addEventListener("load", () => {
+										uploadfile.progress = 1;
+										_.delay(() => {
+											uploadfile.uploaded = true;
+											m.redraw();
+										}, 750);
+									});
+									// file upload failed
+									xhr.addEventListener("error", () => {
+										uploadfile.progress = 0;
+										m.redraw();
+									});
+									// file upload aborted
+									xhr.addEventListener("abort", () => {
+										uploadfile.progress = 0;
+										m.redraw();
+									});
+									// file uploading
+									xhr.addEventListener("progress", (event) => {
+										if (event.lengthComputable) {
+											uploadfile.progress = event.loaded / event.total;
+											m.redraw();
+										}
+									});
+								},
+							})
+								.then((data) => {
+									console.log(data);
+								})
+								.catch((error) => {
+									toastComponent.flashMessage(`${error.status}`, 5000, "red");
+								})
+								.then(() => {
+									vnode.state.uploading = false;
+								})
+						});
+					}
+				}, [
+						m(".upload",
+							m("div", {
+								class: vnode.state.dragging ? "drop-zone drop-zone-hover" : "drop-zone",
+								ondragover: (event) => {
+									vnode.state.dragging = true;
+									event.stopPropagation();
+									event.preventDefault();
+								},
+								ondragleave: (event) => {
+									vnode.state.dragging = false;
+									event.stopPropagation();
+									event.preventDefault();
+								},
+								ondrop: (event) => {
+									vnode.state.dragging = false;
+									event.preventDefault();
+									let i = -1;
+									_.forEach(event.dataTransfer.files, (file) => {
+										i++;
+										vnode.state.uploads.push(fileMetadata(file, vnode.attrs.category, i));
+									})
+								}
+							},
+								[
+									m("input.upload__input.sr-only[m", {
+										id: uploadid,
+										onchange: (event) => {
+											let i = -1;
+											_.forEach(event.target.files, (file) => {
+												i++;
+												vnode.state.uploads.push(fileMetadata(file, vnode.attrs.category, i));
+											})
+										},
+										multiple: true, name: "files[]", type: "file"
+									}),
+									m("label.upload__label", { for: uploadid },
+										m("span",
+											[
+												m("span.fa.fa-folder-open"),
+												" Send document(s) to SDX Messaging"
+											]
+										)
+									)
+								]
+							)
+						),
+						m("div", { style: { "display": _.filter(vnode.state.uploads, (upload) => upload.category === vnode.attrs.category && !upload.uploaded).length > 0 ? "block" : "none" } },
+							[
+								m("h3.list-header.color-text", "Review/Rename Files"),
+
+								m("ul.files", _.map(_.filter(vnode.state.uploads, (upload) => upload.category === vnode.attrs.category && !upload.uploaded), (file) => m("li.file-li", { key: file.id }, [
+									m("input[type='text']", {
+										value: file.name,
+										oninput: m.withAttr("value", (name) => {
+											file.name = name;
+										})
+									}),
+									m("i.file-input-icon.fa.fa-upload.color-text"),
+									m("div.file-input-post", [
+										`${file.extension} `,
+										m("span.file__size",
+											`${filesizeinkb(file.queuedfile.size)} `
+										),
+										m("i.clickable", {
+											onclick: () => {
+												vnode.state.removeFile(file.id)
+											},
+											title: `Remove ${file.name}`
+										}, m("i.fa.fa-trash.color-text"))
+									]),
+									m("progress[max='1']", { value: file.progress })
+								])
+								)),
+								m(".frow.justify-around",
+									m("button.mb-50.col-xs-3-10[type='submit']", {
+										disabled: vnode.state.uploading
+									},
+										"UPLOAD"
+									)
+								)
+							]
+						)
+					]
+				);
+			}
+		}
+
+		let current = "INBOX";
+
+		const libraryComponent = {
+			view: () => [
+				m(".col-lg-1-2", m(".m-15.", [
+					m(".frow.inline.row-center", { style: "color: ${colour};" }, [
+						m(".icon", {style: "width:32px"},
+							m(`i.fa ${categoryIcon(current)}`, { style: "font-size: 24px;" })
+						),
+						m("h4.ml-5", `${current}`)
+					]),
+					m("ul.files", _.map(_.filter(documents, { "category": current, "origin": "office" }), (d) => m(DocumentComponent, { doc: d }))
+					)
+				])),
+				m(".col-lg-1-2", m(".m-15", [
+					m(".frow.inline.row-center", { style: "color: ${colour};" }, [
+					m(".icon", {style: "width:32px"},
+							m("i.fa fa-upload", { style: "font-size: 24px;" })
+						),
+						m("h4.ml-5", "OUTBOX")
+					]),
+					_.map(_.filter(documents, { "category": current, "origin": "customer" }), (d) => m(DocumentComponent, { doc: d })),
+					m(uploadComponent, { category: current, subcategory: "N/A" })
+				]))
+			]
+		};
+
+
+		const library = document.getElementById("library");
+
+		m.mount(library, libraryComponent);
+
+
+		const menu = document.getElementById("menu");
+
+		const menuComponent = {
+			view: () => {
+				const menuitems = _.map(_.groupBy(documents, "category"), function (x, y) { return { category: y, actions: _.reduce(x, function (sum, n) { return sum + n.actions; }, 0) } })
+				return _.map(menuitems, (item) => m(".icon", { style: `color: ${item.category == current ? "#999999" : "#666666"}`, onclick: () => current = item.category }, m("span.fa-layers fa-fw fa-3x", [m(`i.fa ${categoryIcon(item.category)}`), item.actions > 0 ? m("span.fa-layers-counter", item.actions) : null])))
+			}
+		}
+
+		m.mount(menu, menuComponent);
+
+
+		const toastState = {
+			message: "Hello World!",
+			active: false,
+			duration: 1500,
+			tmr: null,
+			bgcolor: "${colour}",
+			color: "white"
+		};
+
+		const toastComponent = {
+			flashMessage: (message = toastState.message, duration = toastState.duration, bgcolor = toastState.bgcolor, color = toastState.color) => {
+				toastState.message = message;
+				toastState.active = true;
+				toastState.bgcolor = bgcolor;
+				toastState.color = color;
+				toastState.tmr = setTimeout(toastComponent.dismiss, duration);
+				m.redraw();
+			},
+			dismiss: () => {
+				toastState.active = false;
+				m.redraw();
+			},
+			view: () => m("div", {
+				style: `color: ${toastState.color};background-color: ${toastState.bgcolor}`,
+				class: toastState.active ? "notification notification--active" : "notification",
+			}, toastState.message),
+		};
+
+		m.mount(document.getElementById("toast"), toastComponent);
+		toastComponent.flashMessage("Welcome to your Secure Document Vault", 5000);
+	});
+})();
+]]></value>
+	</token>
+		<token>
+		<name>office_html</name>
+		<value><![CDATA[
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<script defer src="https://cloud.sdxmessaging.com/resources/fbd/fa-svg/js/fa-solid.js"></script>
+	<script defer src="https://cloud.sdxmessaging.com/resources/fbd/fa-svg/js/fa-regular.js"></script>
+	<script defer src="https://cloud.sdxmessaging.com/resources/fbd/fa-svg/js/fontawesome.js"></script>
+	<link rel="icon" href="https://www.fbd.ie/favicon.ico?v=2">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/Beg-in/frow/3.0.0/dist/frow.min.css">
+	<style>
+		a {
+			color: #337ab7;
+		}
+
+		header {
+			padding: 20px;
+		}
+
+		main {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		@font-face {
+			font-family: 'tisa';
+			src: url("https://cloud.sdxmessaging.com/resources/fbd/fonts/TisaSansOT.woff") format("woff");
+		}
+
+		@font-face {
+			font-family: 'tisa-medium';
+			src: url("https://cloud.sdxmessaging.com/resources/fbd/fonts/TisaSansOT-Medium.woff") format("woff");
+		}
+
+		.tisa {
+			font-family: tisa, sans-serif;
+		}
+
+		.tisa-medium {
+			font-family: tisa-medium, sans-serif;
+		}
+
+		.floating-menu {
+			background: black;
+			width: 100%;
+			z-index: 100;
+			position: fixed;
+			height: 56px;
+			padding-left: 12px;
+			bottom: 0px;
+		}
+
+		.icon {
+			padding: 5px;
+			width: 64px;
+		}
+
+		.notification {
+			position: fixed;
+			z-index: 999;
+			top: 0;
+			left: 0;
+			width: 100%;
+			padding: 12px 15px;
+			font-size: 16px;
+			font-weight: bold;
+			text-align: center;
+			-webkit-transition: -webkit-transform 0.3s;
+			transition: transform 0.3s;
+			transform: translate(0, -100%)
+		}
+
+		.notification--warning {
+			background: #f0ad4e !important;
+		}
+
+		.notification--danger {
+			background: #d9534f !important;
+		}
+
+		.notification--active {
+			transform: none;
+		}
+
+		@keyframes newFileBg {
+			0%,
+			80% {
+				background: #21B0EC
+			}
+			100% {
+				background: #fff
+			}
+		}
+
+		@keyframes newFileText {
+			0%,
+			80% {
+				color: #fff
+			}
+			100% {
+				color: inherit
+			}
+		}
+
+		.files {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.file {
+			margin: 0;
+			padding: 12px 38px 12px 15px;
+			border-bottom: 1px solid #d3d3d3;
+			position: relative;
+		}
+
+		.file a {
+			color: #000;
+			text-decoration: none;
+		}
+
+		.file__size {
+			color: #999999;
+		}
+
+		.file .fa {
+			margin-right: 10px;
+		}
+
+		.file--new {
+			animation: newFileBg 1.5s;
+		}
+
+		.file--new * {
+			animation: newFileText 1.5s;
+		}
+
+		.file--unviewed {
+			font-weight: bold;
+		}
+
+		.file--unviewed:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			margin-top: -4px;
+			right: 15px;
+			width: 8px;
+			height: 8px;
+			background: currentColor;
+			border-radius: 50%;
+		}
+
+		.file--expired a {
+			text-decoration: line-through; 
+		}
+
+		.file--expired *,
+		.file--embargoed * {
+			opacity: 0.5;
+		}
+
+		.files--uploads .file:after {
+			display: inline-block;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: 16px;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			position: absolute;
+			top: 50%;
+			margin-top: -8px;
+			right: 15px;
+			content: '\f1e0';
+			color: #d3d3d3;
+		}
+
+		.files--queue {
+			border-top: 1px solid #d3d3d3;
+		}
+
+
+		.file * {
+			z-index: 1;
+			position: relative;
+		}
+
+		.file__progress {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 0;
+			background: #f1f1f1;
+			right: 0;
+			bottom: 0;
+			width: 0;
+		}
+
+		.file__right {
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			transform: translate(0, -50%);
+		}
+
+		.file__edit {
+			-webkit-appearance: none;
+			appearance: none;
+			background: none;
+			border: 0;
+			border-radius: 0;
+			padding: 0;
+			font-size: 16px;
+			line-height: 1;
+			cursor: pointer;
+		}
+
+		.file__edit .fa {
+			margin: 0;
+		}
+
+		.file-actions {
+			position: absolute;
+			top: 0;
+			right: 0;
+			font-size: 16px;
+		}
+
+		.file-action {
+			-webkit-appearance: none;
+			appearance: none;
+			background: none;
+			border: 0;
+			border-radius: 0;
+			padding: 0;
+			margin: 0;
+		}
+
+		.file-action .fa {
+			font-size: 18px;
+			margin: 0;
+		}
+	</style>
+
+	<!-- File upload component styling -->
+	<style>
+		/* .color-text {
+			color: #21B0EC!important
+		} */
+
+		.drop-zone {
+			border: 2px dashed #bbb;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+			height: 100px;
+		}
+
+		.drop-zone label {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+		}
+
+		.drop-zone-hover {
+			border-color: #21B0EC;
+			background-color: #f5fffa;
+		}
+
+		.list-header {
+			margin: 10px;
+		}
+
+		/* File rename and status */
+
+		.file-li {
+			position: relative;
+		}
+
+		.file-li input {
+			padding-left: 36px;
+		}
+
+		/* Prevent "X" at far right in IE/Edge */
+
+		.file-li input::-ms-clear {
+			display: none;
+		}
+
+		.file-li progress {
+			width: 100%;
+		}
+
+		.file-input-icon,
+		.file-input-post {
+			position: absolute;
+			top: 0;
+			font-size: 16px;
+		}
+		.file-input-icon {
+			margin: 7px;
+			left: 0;
+		}
+		.file-input-post {
+			padding: 9px;
+			right: 0;
+		}
+	</style>
+</head>
+
+<body class="tisa">
+	<div id="toast"></div>
+	<header>
+		<div class="frow" id="header"></div>
+	</header>
+	<main id="library" class="frow justify-around"></main>
+	<nav class="floating-menu">
+		<div class="frow justify-between">
+			<div class="frow justify-start" id="menu"></div>
+			<div class="frow justify-end">
+				<div class="icon">
+					<a href="/vault/${loggedout.html}"><i class="fa fa-sign-out" style="color: #666666; font-size: 48px" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mithril/1.1.6/mithril.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/4.2.1/pusher.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.3/moment.min.js"></script>
+	<script>${documents.js}</script>
+	<script>${vault.js}</script>
+</body>
+
+</html>]]></value>
+	</token>
+	<token>
+		<name>auroratable</name>
+		<value><![CDATA[vault.`sdx-7d4778cd-4b26-4340-aedf-ba4d1bfd11ae`]]></value>
+	</token>
+	<token>
+		<name>brokerlicensee</name>
+		<value><![CDATA[sdx/sdx-68f34b77-a902-4c0a-ab99-fcb2eaae646b]]></value>
+	</token>
+	<token>
+		<name>client</name>
+		<value><![CDATA[SDX001]]></value>
+	</token>
+	<token>
+		<name>key</name>
+		<value><![CDATA[9oFFMBTi3Po8v]]></value>
+	</token>
+	<token>
+		<name>company</name>
+		<value><![CDATA[SDX Messaging]]></value>
+	</token>
+	<token>
+		<name>safedepositbox</name>
+		<value><![CDATA[sdx]]></value>
+	</token>
+	<token>
+		<name>address</name>
+		<value><![CDATA[Chartermark Way | Colburn Business Park | ]]></value>
+	</token>
+	<token>
+		<name>postaltown</name>
+		<value><![CDATA[Colburn ]]></value>
+	</token>
+	<token>
+		<name>postalcode</name>
+		<value><![CDATA[DL9 4QJ]]></value>
+	</token>
+	<token>
+		<name>colour</name>
+		<value><![CDATA[#0061B5]]></value>
+	</token>
+	<token>
+		<name>logo</name>
+		<value><![CDATA[<a href="https://www.sdxmessaging.com"><img src="https://cloud.sdxmessaging.com/vault/sdx/resources/logo.png" width="225" height="101" /></a>]]></value>
+	</token>
+	<token>
+		<name>copyright</name>
+		<value><![CDATA[<p>SDX Messagingp>]]></value>
+	</token>
+	<token>
+		<name>from</name>
+		<value><![CDATA[admin@sdxmessaging.com]]></value>
+	</token>
+	<token>
+		<name>sms</name>
+		<value><![CDATA[SDX]]></value>
+	</token>
+	<token>
+		<name>notification-email-subject</name>
+		<value><![CDATA[ SDX Messaging Document Portal]]></value>
+	</token>
+	<token>
+		<name>officetelephone</name>
+		<value><![CDATA[ 0845 017 7910]]></value>
+	</token>
+	<token>
+		<name>officeemail</name>
+		<value><![CDATA[team@sdxmessaging.com]]></value>
+	</token>
+	<token>
+		<name>title</name>
+		<value><![CDATA[Document Vault - ${company}]]></value>
+	</token>
+	<token>
+		<name>broker</name>
+		<value><![CDATA[SDX Messaging]]></value>
+	</token>
+	<token>
+		<name>email-auditing</name>
+		<value><![CDATA[sdx-audit@sdxmessaging.com]]></value>
+	</token>
+	<!-- CDN CSS and Javascript resources -->
+	<token>
+		<name>fontawesomecdn</name>
+		<value><![CDATA[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css]]></value>
+	</token>
+	<token>
+		<name>frowcdn</name>
+		<value><![CDATA[https://cdn.rawgit.com/Beg-in/frow/3.0.0/dist/frow.min.css]]></value>
+	</token>
+	<token>
+		<name>lodashcdn</name>
+		<value><![CDATA[https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js]]></value>
+	</token>
+	<token>
+		<name>pushercdn</name>
+		<value><![CDATA[https://cdnjs.cloudflare.com/ajax/libs/pusher/4.2.1/pusher.min.js]]></value>
+	</token>
+	<token>
+		<name>mithrilcdn</name>
+		<value><![CDATA[https://cdnjs.cloudflare.com/ajax/libs/mithril/1.1.5/mithril.min.js]]></value>
+	</token>
+	<token>
+		<name>hammercdn</name>
+		<value><![CDATA[https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js]]></value>
+	</token>
+	<token>
+		<name>momentcdn</name>
+		<value><![CDATA[https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.min.js]]></value>
+	</token>
+	<token>
+		<name>salutation</name>
+		<value><![CDATA[Andrew]]></value>
+	</token>
+	<token>
+		<name>shortdomain</name>
+		<value><![CDATA[dox4.me]]></value>
+	</token>
+	<token>
+		<name>shorten</name>
+		<value><![CDATA[
+import org.apache.commons.lang3.RandomStringUtils
+int randomStringLength = 6
+// charset is NOT put in variable binding scope
+def charset = (('a'..'z') + ('A'..'Z') + ('0'..'9')+'_-').join()
+// shortened IS put in variable binding scope as it does not use def keyword
+shortened = RandomStringUtils.random(randomStringLength, charset.toCharArray())
+]]></value>
+	</token>
+	<token>
+		<name>name</name>
+		<value><![CDATA[${salutation}]]></value>
+	</token>
+	<token>
+		<name>dob</name>
+		<value><![CDATA[08/02/1963]]></value>
+	</token>
+	<token>
+		<name>postcode</name>
+		<value><![CDATA[DL10 5BN]]></value>
+	</token>
+	<token>
+		<name>testing</name>
+		<value><![CDATA[true]]></value>
+	</token>
+	<token>
+		<name>timeout</name>
+		<value><![CDATA[3600]]></value>
+	</token>
+	<token>
+		<name>carheader</name>
+		<value><![CDATA[<h1><span class="fa fa-car fa-fw color-text"></span>Car</h1>]]></value>
+	</token>
+	<token>
+		<name>househeader</name>
+		<value><![CDATA[<h1><span class="fa fa-home fa-fw color-text"></span>House</h1>]]></value>
+	</token>
+	<token>
+		<name>poweredbylogo</name>
+		<value><![CDATA[<img src="https://cloud.sdxmessaging.com/resources/sdx/poweredby.svg" width="125">]]></value>
+	</token>
+	<token>
+		<name>brokercopy</name>
+		<value><![CDATA[true]]></value>
+	</token>
+	<token>
+		<name>server</name>
+		<value><![CDATA[cloud]]></value>
+	</token>
+	<token>
+		<name>login.js</name>
+		<value><![CDATA[
+// IIFE
+
+(function () {
+	'use strict';
+
+
+	document.addEventListener("DOMContentLoaded", () => {
+
+		const processMessage = data => toastComponent.flashMessage(data.message, data.duration, data.color);
+
+		const processHeader = data => {
+			Data.header = _.merge(Data.header, data, {
+				deep: true,
+			});
+			m.redraw();
+		};
+
+		const pusher = new Pusher('f331e76dbe5845b66752', {
+			encrypted: true,
+		});
+
+		const channel = pusher.subscribe('vault');
+
+		channel.bind('message', processMessage);
+		channel.bind('company', processHeader);
+
+		const Data = {
+			getHeader: () => m.request("https://cloud.sdxmessaging.com/vault/sdx/resources/header.json"),
+
+			// default values
+			header: {"version": "1.0",
+"logo": {
+	"class": "col-xs-1-4",
+	"src": "https://cloud.sdxmessaging.com/vault/sdx/resources/logo.svg",
+	"height": "75px"
+},
+"contact": {
+	"class": "col-xs-3-4",
+	"style" : {"text_align": "right"},
+	"prefix": "SDX Messaging ",
+	"href": "tel:+3532222591",
+	"title": "Phone number SDX Messaging",
+	"phone": "0845 017 7910",
+	"week": "Monday - Friday, 9.00am - 5.00pm",
+	"week_style": {"color": "#0061B5"},
+	"weekend": "",
+	"weekend_style": {"color": "#0061B5"}
+},
+"copyright": "© 2017 SDX Messaging"
+},
+			error: "",
+			fetch: () => Data.getHeader()
+				.then((data) => {
+					Data.header = data;
+				})
+				.catch((e) => {
+					Data.error = e;
+				}
+				),
+		};
+
+		const header = document.getElementById("header");
+
+		const headerComponent = {
+			oninit: Data.fetch,
+			view: () => [
+				m("div", { class: Data.header.logo.class },
+					m("img", { height: Data.header.logo.height, src: Data.header.logo.src })
+				),
+				m("div", { class: Data.header.contact.class, style: { "text-align": Data.header.contact.style.text_align } },
+					[
+						m("div",
+							[`${Data.header.contact.prefix}`,
+							m("a", { href: Data.header.contact.href, title: Data.header.contact.title },
+								Data.header.contact.phone
+							)
+							]
+						),
+						m("div", { style: { "color": Data.header.contact.week_style.color } },
+							Data.header.contact.week
+						),
+						m("div", { style: { "color": Data.header.contact.weekend_style.color } },
+							Data.header.contact.weekend
+						)					]
+				)
+			],
+		};
+
+
+		m.mount(header, headerComponent);
+
+
+		const toastState = {
+			message: "Hello World!",
+			active: false,
+			duration: 1500,
+			tmr: null,
+			bgcolor: "${colour}",
+			color: "white"
+		};
+
+		const toastComponent = {
+			flashMessage: (message = toastState.message, duration = toastState.duration, bgcolor = toastState.bgcolor, color = toastState.color) => {
+				toastState.message = message;
+				toastState.active = true;
+				toastState.bgcolor = bgcolor;
+				toastState.color = color;
+				toastState.tmr = setTimeout(toastComponent.dismiss, duration);
+				m.redraw();
+			},
+			dismiss: () => {
+				toastState.active = false;
+				m.redraw();
+			},
+			view: () => m("div", {
+				style: `color: ${toastState.color};background-color: ${toastState.bgcolor}`,
+				class: toastState.active ? "notification notification--active" : "notification",
+			}, toastState.message),
+		};
+
+		m.mount(document.getElementById("toast"), toastComponent);
+		toastComponent.flashMessage("Please enter the PIN number provided by SDX", 5000);
+	});
+})();]]></value>
+	</token>
+	<token>
+		<name>licensee</name>
+		<value><![CDATA[${brand}/portal]]></value>
+	</token>
+	<token>
+		<name>sendemail</name>
+		<value><![CDATA[true]]></value>
+	</token>
+	<token>
+		<name>year</name>
+		<value><![CDATA[2019]]></value>
+	</token>
+	<token>
+		<name>softlock</name>
+		<value><![CDATA[999]]></value>
+	</token>
+	<token>
+		<name>softlockout</name>
+		<value><![CDATA[60]]></value>
+	</token>
+	<token>
+		<name>hardlock</name>
+		<value><![CDATA[999]]></value>
+	</token>
+	<token>
+		<name>hardlockout</name>
+		<value><![CDATA[3600]]></value>
+	</token>
+	<token>
+		<name>embargo</name>
+		<value><![CDATA[2013-01-01T00:00:00]]></value>
+	</token>
+	<token>
+		<name>expiry</name>
+		<value><![CDATA[2999-12-31T23:59:59]]></value>
+	</token>
+	<token>
+		<name>vaulturl</name>
+		<value><![CDATA[https://${server}.sdxmessaging.com/vault/]]></value>
+	</token>
+	<token>
+		<name>htmlaccountlogin</name>
+		<value><![CDATA[
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<link rel="icon" href="https://www.fbd.ie/favicon.ico?v=2">
+	<script defer src="https://cloud.sdxmessaging.com/resources/fbd/fa-svg/js/fa-solid.js"></script>
+	<script defer src="https://cloud.sdxmessaging.com/resources/fbd/fa-svg/js/fa-regular.js"></script>
+	<script defer src="https://cloud.sdxmessaging.com/resources/fbd/fa-svg/js/fontawesome.js"></script>
+	<link rel="stylesheet" href="${frowcdn}">
+	<style>
+		a {
+			color: #337ab7;
+		}
+
+		header {
+			padding: 20px;
+		}
+
+		main {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		@font-face {
+			font-family: 'tisa';
+			src: url("https://cloud.sdxmessaging.com/resources/fbd/fonts/TisaSansOT.woff") format("woff");
+		}
+
+		@font-face {
+			font-family: 'tisa-medium';
+			src: url("https://cloud.sdxmessaging.com/resources/fbd/fonts/TisaSansOT-Medium.woff") format("woff");
+		}
+
+		.tisa {
+			font-family: tisa, sans-serif;
+		}
+
+		.tisa-medium {
+			font-family: tisa-medium, sans-serif;
+		}
+
+		.floating-menu {
+			background: black;
+			width: 100%;
+			z-index: 100;
+			position: fixed;
+			height: 56px;
+			padding-left: 12px;
+			bottom: 0px;
+		}
+
+		.icon {
+			padding: 5px;
+			width: 64px;
+		}
+
+		.notification {
+			position: fixed;
+			z-index: 999;
+			top: 0;
+			left: 0;
+			width: 100%;
+			color: white;
+			padding: 12px 15px;
+			font-size: 16px;
+			font-weight: bold;
+			text-align: center;
+			-webkit-transition: -webkit-transform 0.3s;
+			transition: transform 0.3s;
+			transform: translate(0, -100%)
+		}
+
+		.notification--warning {
+			background: #f0ad4e !important;
+		}
+
+		.notification--danger {
+			background: #d9534f !important;
+		}
+
+		.notification--active {
+			transform: none;
+		}
+	</style>
+</head>
+
+<body class="tisa">
+	<div id="toast"></div>
+	<header>
+		<div class="frow" id="header"></div>
+	</header>
+	<main>
+		<div class="frow justify-start">
+			<div>
+				<h2>${portal}</h2>
+				<form enctype="multipart/form-data" method="post" novalidate="novalidate" class="form">
+					<div>Please enter the PIN number provided by SDX:</div>
+					<br>
+					<input name="username" type="hidden" readonly="readonly" value="${username}">
+					<label for="password">PIN
+						<input autofocus="autofocus" name="password" placeholder="Enter PIN number" type="password">
+					</label>
+					<button type="submit" class="btn">
+						<span>Enter ${portal}</span>
+					</button>
+				</form>
+			</div>
+		</div>
+	</main>
+	<nav class="floating-menu">
+		<div class="frow justify-between">
+			<div class="frow justify-start"></div>
+			<div class="frow justify-end">
+				<div class="icon">
+					<i class="fa fa-question-circle" style="color: #666666; font-size: 48px" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<script src="${hammercdn}"></script>
+	<script src="${mithrilcdn}"></script>
+	<script src="${lodashcdn}"></script>
+	<script src="${pushercdn}"></script>
+	<script src="${momentcdn}"></script>
+	<script>${login.js}</script>
+
+</body>
+
+</html>]]></value>
+	</token>
+	<token>
+		<name>notification-email-html</name>
+		<value><![CDATA[
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Documents Sent</title>
+	</head>
+	<body style="text-align:center;padding:5px 0px 0px 0px;margin:0px;font-size:1.25em; font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;line-height:1.6em; color:#2F3335;">
+		<table width="80%" border="0" cellspacing="0" cellpadding="0" style="margin-left:auto;margin-right:auto;text-align:left;">
+			<tr>
+				<td colspan="2" style="text-align:left;padding:20px 10px 20px 10px;background-color:white;">${logo}</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="padding:10px;">
+					<p>Dear ${salutation}</p>
+					<p>For your security we hold your documents in a secure document vault to which only you have access.</p>
+					<p>To view your documents please click on the link below which will direct you to your secure personal vault.</p>
+		            <p><a style="color:${colour}" href="${vaulturl}${safedepositbox}/cto/"><strong>Click here to view your documents</strong></a></p>
+					<p>Should you have any issues accessing this please contact our Customer Services Team on <span style="color:${colour}">${officetelephone}</span> or <a href="mailto:${officeemail}" style="color:${colour}">${officeemail}</a></p>
+					<p>Yours Sincerely.</p>
+					<p>${company}</p>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr>
+					<p style="color:#666666;font-size:11px;line-height:14px;font-family:Arial,Helvetica,san-serif;">&copy;&nbsp;${year} ${company}</p>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>]]></value>
+	</token>
+</sdx:tokens>

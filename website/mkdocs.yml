@@ -1,0 +1,8 @@
+site_name: SDX Documentation
+theme: 'mkdocs'
+nav:
+- HOME: index.md
+- T4:
+    - On-boarding: t4/onboarding.md
+- Employee Benefits:
+    - TBD: eb/tbd.md
