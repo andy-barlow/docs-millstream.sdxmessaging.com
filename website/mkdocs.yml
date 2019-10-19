@@ -4,5 +4,7 @@ nav:
 - HOME: index.md
 - T4:
     - On-boarding: t4/onboarding.md
+- Generic:
+    - On-boarding: generic/onboarding.md
 - Employee Benefits:
     - TBD: eb/tbd.md

@@ -161,7 +161,7 @@ Postcode |EC3A 6HX
 Office Telephone |01206 773 777
 Office e-mail |customerservices@hiscox.com
 Logo |  <a href="#"><img src="https://cloud.sdxmessaging.com/resources/hiscox/logo.png" width="187" height="91.5" /></a>
-Copyright |
+Copyright |Copyright &copy; 2019 Millstream Underwriting Limited. ALL Rights Reserved. 
 Notification e-mail "from" | hiscox@sdxmessaging.com
 Notification e-mail subject |Relax - Your Travel Insurance is all done
 Vault URL| https://hiscoxtravelinsurance.sdxmessaging.com
@@ -195,7 +195,7 @@ Postcode |EC3A 6HX
 Office Telephone |01206 773 777
 Office e-mail |customerservices@hiscox.com
 Logo |  <a href="#"><img src="https://cloud.sdxmessaging.com/resources/hiscox/logo.png" width="187" height="91.5" /></a>
-Copyright |
+Copyright |Copyright &copy; 2019 Millstream Underwriting Limited. ALL Rights Reserved. 
 Notification e-mail "from" | hiscox@sdxmessaging.com
 Notification e-mail subject |Relax - Your Travel Insurance is all done
 Vault URL| https://hiscoxtravelinsurance.sdxmessaging.com
@@ -303,23 +303,27 @@ Vault Title (shows at top of browser)|Document Vault - Aston Lark
 Vault URL| https://astonlark.sdxmessaging.com
 Stationery | [Aston Lark Letterhead (click to view)](../static-resources/stationery/164/letterhead.pdf)
 
-##Affiliate 167: Islands Travel Insurance
+##Affiliate 167: Islands Travel Insurance (Islands I)
 
 Setting|Value
 ----|-------
 brand | islands
 360 Assistance | yes
 Stranded Passenger | yes
-Customer Service e-mail | 
-Customer Service telephone | 
+Customer Service e-mail (Jersey)|+44 1534 835 383 
+Customer Service telephone (Jersey)|insure@islands.je 
+Customer Service e-mail (Guernsey)|insure@islands.gg 
+Customer Service telephone (Guernsey)|+44 1481 710 731 
+Customer Service e-mail (Alderney)|alderney@islands.gg 
+Customer Service telephone (Alderney)|+44 1481 824 100 
 Customer Service hours | 
 Emergency Medical Assistance e-mail | 
-Emergency Medical Assistance telephone | 
+Emergency Medical Assistance telephone |+44 330 311 2879 
 Medical Screening e-mail | 
 Medical Screening telephone | 
-Travel Insurance Claims e-mail |
-Travel Insurance Claims telephone |
-360 Assistance telephone |+44 (0)20 7736 1595
+Travel Insurance Claims e-mail |claims@mstream.co.uk
+Travel Insurance Claims telephone |+44 330 311 2879
+360 Assistance telephone |+44 330 660 0581
 Security Exchange Services | 
 Colour |<span style="color:#16A8E6">#16A8E6</span>
 Company |Islands Insurance
@@ -336,3 +340,72 @@ Vault Title (shows at top of browser)|Document Vault - Islands
 Vault URL| https://islands.sdxmessaging.com
 Stationery | [Islands Travel Letterhead (click to view)](../static-resources/stationery/167/letterhead.pdf)
 
+##Affiliate 168: Towergate Active
+
+Setting|Value
+----|-------
+brand | towergate
+360 Assistance | yes
+Stranded Passenger | yes
+Customer Service e-mail | 
+Customer Service telephone | +44 (0) 330 123 2249
+Customer Service hours | 
+Emergency Medical Assistance e-mail | assistance@mstream.co.uk
+Emergency Medical Assistance telephone | +44 (0) 330 660 0785
+Medical Screening e-mail | healthcheck@mstream.co.uk
+Medical Screening telephone | +44 (0)330 660 0563
+Travel Insurance Claims e-mail | claims@mstream.co.uk
+Travel Insurance Claims telephone | +44 (0) 330 660 0785
+360 Assistance telephone |+44 (0)20 7736 1595
+Security Exchange Services | 
+Colour |<span style="color:#182240">#182240</span>
+Company |Towergate Active
+Address |1 Minster Court &#124; Mincing Lane 
+Postal Town|London
+Postcode |EC3R 7AA
+Office Telephone |020 7398 2100
+Office e-mail |
+Logo | <img src="https://www.towergateinsurance.co.uk/css/images/towergate-insurance-logo.png" width="202" height="62" />
+Copyright |Copyright &copy; 2019 Towergate Insurance Group
+Notification e-mail "from" |towergate@sdxmessaging.com
+Notification e-mail subject |Your Towergate Active documentation
+Vault Title (shows at top of browser)|Document Vault - Towergate
+Vault URL| https://towergate.sdxmessaging.com
+Stationery | [Towergate Travel Letterhead (click to view)](../static-resources/tbd.md)
+
+##Affiliate 185: Islands Travel Insurance (Islands III)
+
+Setting|Value
+----|-------
+brand | islands
+360 Assistance | yes
+Stranded Passenger | yes
+Customer Service e-mail (Jersey)|+44 1534 835 383 
+Customer Service telephone (Jersey)|insure@islands.je 
+Customer Service e-mail (Guernsey)|insure@islands.gg 
+Customer Service telephone (Guernsey)|+44 1481 710 731 
+Customer Service e-mail (Alderney)|alderney@islands.gg 
+Customer Service telephone (Alderney)|+44 1481 824 100 
+Customer Service hours | 
+Emergency Medical Assistance e-mail | 
+Emergency Medical Assistance telephone |+44 330 311 2879 
+Medical Screening e-mail | 
+Medical Screening telephone | 
+Travel Insurance Claims e-mail |claims@mstream.co.uk
+Travel Insurance Claims telephone |+44 330 311 2879
+360 Assistance telephone |+44 330 660 0581
+Security Exchange Services | 
+Colour |<span style="color:#16A8E6">#16A8E6</span>
+Company |Islands Insurance
+Address |Kingsgate House &#124; 55 The Esplanade
+Postal Town|St Helier
+Postcode |JE1 4HQ
+Office Telephone |(01534) 835 383
+Office e-mail |
+Logo | <img src="https://www.islands.insure/assets/islands/images/logo.png" width="240" height="136" />
+Copyright |Copyright &copy; 2019 Islands Insurance Group
+Notification e-mail "from" |islands@sdxmessaging.com
+Notification e-mail subject |Your Islands documentation
+Vault Title (shows at top of browser)|Document Vault - Islands
+Vault URL| https://islands.sdxmessaging.com
+Stationery | [Islands Travel Letterhead (click to view)](../static-resources/stationery/174/letterhead.pdf)
