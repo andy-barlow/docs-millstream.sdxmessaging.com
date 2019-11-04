@@ -1,6 +1,6 @@
 sjr='millstream'
 tstamp=$(date +"%y-%m-%d-%H-%M-%S")
-cd ~/Desktop/workspace/git/docs-millstream.sdxmessaging.com/sjr
+cd /Users/Shared/git/docs-millstream.sdxmessaging.com/sjr
 signsjr sjr.xml
 zip $sjr-$tstamp.sjr.1 sjr.xml tokens.xml digsig.xml assets.zip
 curl -F sjr=@$sjr-$tstamp.sjr.1 -k -u SDX001:9oFFMBTi3Po8v https://cloud.sdxmessaging.com/rest/sjr
