@@ -33,6 +33,40 @@ Vault URL (generic)| https://beazley.sdxmessaging.com
 Vault Title (shows at top of browser)|Beazley 360 Assistance and Stranded Passenger
 Stationery | n/a
 
+##Brit Insurance 360 and SP
+
+Setting|Value
+----|-------
+brand | brit
+360 Assistance | yes
+Stranded Passenger | yes
+Customer Service e-mail |  
+Customer Service telephone | 
+Customer Service hours |  
+Emergency Medical Assistance e-mail | 
+Emergency Medical Assistance telephone | 
+Medical Screening e-mail | 
+Medical Screening telephone | 
+Travel Insurance Claims e-mail | 
+Travel Insurance Claims telephone | 
+360 Assistance telephone |
+Security Exchange Services | 
+Colour |<span style="color:#15AAD3">#15AAD3</span>
+Company | Brit Insurance
+Address |The Leadenhall Building &#124; 122 Leadenhall Street
+Postal Town|London
+Postcode | EC3V 4AB
+Office Telephone |+44 (0)20 3857 0000
+Office e-mail |admin@britinsurance.com
+Logo |  <img src="https://www.britinsurance.com/~/media/images/brit%20insurance/logos/logo_plain_short_2.ashx?h=79&la=en&w=200"/>
+Copyright|Copyright &copy; 2020 Brit Group Services. All rights reserved.
+Notification e-mail "from" | n/a
+Notification e-mail subject | n/a
+Vault URL (generic)| [https://brit.sdxmessaging.com/vault/brit360sp/benefits.html](https://brit.sdxmessaging.com/vault/brit360sp/benefits.html)
+Vault PIN| 7434
+Vault Title (shows at top of browser)|Brit Insurance 360 Assistance and Stranded Passenger
+Stationery | n/a
+
 ##Covea 360 and SP
 
 Setting|Value
