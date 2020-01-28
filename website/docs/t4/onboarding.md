@@ -17,7 +17,7 @@ Medical Screening telephone |
 Travel Insurance Claims e-mail |
 Travel Insurance Claims telephone | +44 (0)330 660 0785
 360 Assistance telephone |+44 (0)20 7736 1595
-Security Exchange Services | 
+Security Assistance Services | 
 Colour |<span style="color:#6bc04b">#6bc04b</span>
 Company | Millstream Underwriting Limited
 Address |52-56 Leadenhall Street
@@ -50,7 +50,7 @@ Medical Screening telephone |
 Travel Insurance Claims e-mail |
 Travel Insurance Claims telephone | +44 (0)330 660 0785
 360 Assistance telephone |+44 (0)20 7736 1595
-Security Exchange Services | 
+Security Assistance Services | 
 Colour |<span style="color:#edaf2f">#edaf2f</span>
 Company |Sutton Winson
 Address | St James House &#124; Grosvenor Road 
@@ -118,7 +118,7 @@ Medical Screening telephone | +44 (0)330 660 0563
 Travel Insurance Claims e-mail | claims@mstream.co.uk
 Travel Insurance Claims telephone | +44 (0)330 660 0549
 360 Assistance telephone |+44 (0)20 7736 1595
-Security Assistance | +44 (0)330 660 785
+Security Assistance | +44 (0)330 660 0785
 Colour |<span style="color:#fcb112">#fcb112</span>
 Company |Wesleyan Assurance Society
 Address |Colmore Circus
@@ -152,7 +152,7 @@ Medical Screening telephone | +44 (0)330 660 0754
 Travel Insurance Claims e-mail | claims@hiscoxtravelinsurance.co.uk
 Travel Insurance Claims telephone | +44 (0)330 660 0752
 360 Assistance telephone |+44 (0)20 7736 1595
-Security Exchange Services | +44 (0)203 284 8844
+Security Assistance Services | +44 (0)203 284 8844
 Colour |  <span style="color:#d52b1e">#d52b1e</span>
 Company |Hiscox Insurance Services
 Address | 1 Great St Helen&apos;s 
@@ -186,7 +186,7 @@ Medical Screening telephone | +44 (0)330 660 0754
 Travel Insurance Claims e-mail | claims@hiscoxtravelinsurance.co.uk
 Travel Insurance Claims telephone | +44 (0)330 660 0752
 360 Assistance telephone |+44 (0)20 7736 1595
-Security Exchange Services | +44 (0)203 284 8844
+Security Assistance Services | +44 (0)203 284 8844
 Colour |  <span style="color:#d52b1e">#d52b1e</span>
 Company |Hiscox Insurance Services
 Address | 1 Great St Helen&apos;s 
@@ -210,24 +210,24 @@ Setting|Value
 brand | itssoeasy
 360 Assistance | yes
 Stranded Passenger | yes
-Customer Service e-mail | 
-Customer Service telephone | +44 (0)330 606 1422
+Customer Service e-mail | hello@itssoeasytravelinsurance.com
+Customer Service telephone | +44 (0)330 606 1434
 Customer Service hours |  9am and 5pm Monday to Friday
-Emergency Medical Assistance e-mail | 
-Emergency Medical Assistance telephone | +44 (0)20 7902 7990
-Medical Screening e-mail | 
-Medical Screening telephone | +44 (0)330 660 0754
-Travel Insurance Claims e-mail | 
-Travel Insurance Claims telephone | +44 (0)330 660 7990
+Emergency Medical Assistance e-mail | assistance@mstream.co.uk
+Emergency Medical Assistance telephone | +44 (0)20 660 0548
+Medical Screening e-mail | healthcheck@mstream.co.uk
+Medical Screening telephone | +44 (0)330 660 0563
+Travel Insurance Claims e-mail | claims@mstream.co.uk
+Travel Insurance Claims telephone | +44 (0)330 660 0549
 360 Assistance telephone |+44 (0)20 7736 1595
-Security Exchange Services | 
+Security Assistance Services | n/a
 Colour |<span style="color:#182250">#182250</span>
 Company |It's So Easy Travel Insurance
 Address |27 Old Gloucester Street
 Postal Town|London
 Postcode | WC1N 3XX
-Office Telephone |+44 (0)330 606 1422
-Office e-mail | policies@mstream.co.uk
+Office Telephone |+44 (0)330 606 1434
+Office e-mail | hello@itssoeasytravelinsurance.com
 Logo | <img src="https://cloud.sdxmessaging.com/resources/itssoeasy/logo.png" width="100" height="100"/>
 Copyright |Copyright &copy; It's So Easy Travel Insurance 2020. All rights reserved.
 Notification e-mail "from" |policies@mstream.co.uk
@@ -287,7 +287,7 @@ Medical Screening telephone |+44 (0)330 660 0563
 Travel Insurance Claims e-mail |claims@mstream.co.uk
 Travel Insurance Claims telephone |+44 (0)330 311 2873
 360 Assistance telephone |+44 (0)20 7736 1595
-Security Exchange Services | 
+Security Assistance Services | 
 Colour |<span style="color:#9B2C9F">#9B2C9F</span>
 Company |Aston Lark
 Address |Ibex House &#124; 42-47 Minories
@@ -310,29 +310,29 @@ Setting|Value
 brand | islands
 360 Assistance | yes
 Stranded Passenger | yes
-Customer Service e-mail (Jersey)|+44 1534 835 383 
-Customer Service telephone (Jersey)|insure@islands.je 
+Customer Service e-mail (Jersey)|insure@islands.je 
+Customer Service telephone (Jersey)|+44 (0)1534 835 383 
 Customer Service e-mail (Guernsey)|insure@islands.gg 
-Customer Service telephone (Guernsey)|+44 1481 710 731 
+Customer Service telephone (Guernsey)|+44 (0)1481 710 731 
 Customer Service e-mail (Alderney)|alderney@islands.gg 
-Customer Service telephone (Alderney)|+44 1481 824 100 
-Customer Service hours | 
-Emergency Medical Assistance e-mail | 
-Emergency Medical Assistance telephone |+44 330 311 2879 
-Medical Screening e-mail | 
-Medical Screening telephone | 
+Customer Service telephone (Alderney)|+44 (0)1481 824 100 
+Customer Service hours | 9am and 5pm Monday to Friday
+Emergency Medical Assistance e-mail | assistance@mstream.co.uk 
+Emergency Medical Assistance telephone |+44 (0)330 660 0563
+Medical Screening e-mail | healthcheck@mstream.co.uk
+Medical Screening telephone |+44 (0)330 660 0563 
 Travel Insurance Claims e-mail |claims@mstream.co.uk
-Travel Insurance Claims telephone |+44 330 311 2879
-360 Assistance telephone |+44 330 660 0581
-Security Exchange Services | 
+Travel Insurance Claims telephone |+44 (0)330 311 2879
+360 Assistance telephone |+44 (0)330 660 0581
+Security Assistance Services | +44 (0)330 311 2879
 Colour |<span style="color:#16A8E6">#16A8E6</span>
 Company |Islands Insurance
 Address |Kingsgate House &#124; 55 The Esplanade
 Postal Town|St Helier
 Postcode |JE1 4HQ
-Office Telephone |(01534) 835 383
-Office e-mail |
-Logo | <img src="https://www.islands.insure/assets/islands/images/logo.png" width="240" height="136" />
+Office Telephone |+44 (0)1534 835 383
+Office e-mail |insure@islands.je 
+Logo | <img src="https://cloud.sdxmessaging.com/vault/t4/wallet/185-islands-uat/logo.svg" width="128" height="62" />
 Copyright |Copyright &copy; 2020 Islands Insurance Group
 Notification e-mail "from" |islands@sdxmessaging.com
 Notification e-mail subject |Your Islands documentation
@@ -357,7 +357,7 @@ Medical Screening telephone | +44 (0)330 660 0563
 Travel Insurance Claims e-mail | claims@mstream.co.uk
 Travel Insurance Claims telephone | +44 (0) 330 660 0785
 360 Assistance telephone |+44 (0)20 7736 1595
-Security Exchange Services | 
+Security Assistance Services | 
 Colour |<span style="color:#182240">#182240</span>
 Company |Towergate Active
 Address |1 Minster Court &#124; Mincing Lane 
@@ -380,32 +380,32 @@ Setting|Value
 brand | islands
 360 Assistance | yes
 Stranded Passenger | yes
-Customer Service e-mail (Jersey)|+44 1534 835 383 
-Customer Service telephone (Jersey)|insure@islands.je 
+Customer Service e-mail (Jersey)|insure@islands.je 
+Customer Service telephone (Jersey)|+44 (0)1534 835 383 
 Customer Service e-mail (Guernsey)|insure@islands.gg 
-Customer Service telephone (Guernsey)|+44 1481 710 731 
+Customer Service telephone (Guernsey)|+44 (0)1481 710 731 
 Customer Service e-mail (Alderney)|alderney@islands.gg 
-Customer Service telephone (Alderney)|+44 1481 824 100 
-Customer Service hours | 
-Emergency Medical Assistance e-mail | 
-Emergency Medical Assistance telephone |+44 330 311 2879 
-Medical Screening e-mail | 
-Medical Screening telephone | 
+Customer Service telephone (Alderney)|+44 (0)1481 824 100 
+Customer Service hours | 9am and 5pm Monday to Friday
+Emergency Medical Assistance e-mail | assistance@mstream.co.uk 
+Emergency Medical Assistance telephone |+44 (0)330 660 0563
+Medical Screening e-mail | healthcheck@mstream.co.uk
+Medical Screening telephone |+44 (0)330 660 0563 
 Travel Insurance Claims e-mail |claims@mstream.co.uk
-Travel Insurance Claims telephone |+44 330 311 2879
-360 Assistance telephone |+44 330 660 0581
-Security Exchange Services | 
+Travel Insurance Claims telephone |+44 (0)330 311 2879
+360 Assistance telephone |+44 (0)330 660 0581
+Security Assistance Services | +44 (0)330 311 2879
 Colour |<span style="color:#16A8E6">#16A8E6</span>
 Company |Islands Insurance
 Address |Kingsgate House &#124; 55 The Esplanade
 Postal Town|St Helier
 Postcode |JE1 4HQ
-Office Telephone |(01534) 835 383
-Office e-mail |
-Logo | <img src="https://www.islands.insure/assets/islands/images/logo.png" width="240" height="136" />
+Office Telephone |+44 (0)1534 835 383
+Office e-mail |insure@islands.je 
+Logo | <img src="https://cloud.sdxmessaging.com/vault/t4/wallet/185-islands-uat/logo.svg" width="128" height="62" />
 Copyright |Copyright &copy; 2020 Islands Insurance Group
 Notification e-mail "from" |islands@sdxmessaging.com
 Notification e-mail subject |Your Islands documentation
 Vault Title (shows at top of browser)|Document Vault - Islands
 Vault URL| https://islands.sdxmessaging.com
-Stationery | [Islands Travel Letterhead (click to view)](../static-resources/stationery/174/letterhead.pdf)
+Stationery | [Islands Travel Letterhead (click to view)](../static-resources/stationery/167/letterhead.pdf)
